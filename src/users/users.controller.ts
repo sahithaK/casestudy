@@ -18,13 +18,4 @@ register(@Body() reguser:userDTO){
 const save= this._UsersService.saveuser(reguser);
 return save;
 }
-
-
-@UseGuards(AuthGuard('jwt'), RolesGuard)
-@Roles('admin')
-@Post('/greet')
-hellogreet()
-{
-console.log("admin accesed");
-}
 }

@@ -1,5 +1,4 @@
 export class BookingDto{
-    
     flight_id: number;
     booked_by:string
     emailId:string;

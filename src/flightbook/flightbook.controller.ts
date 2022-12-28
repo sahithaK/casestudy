@@ -16,7 +16,7 @@ constructor(private _flighservice:FlightbookService){}
 @UseGuards(AuthGuard('jwt'), RolesGuard)
 @Roles('admin')
 @Post('/create')
-createflight(@Body() create:createFlightDTO, @Req() req:Request){
+createflight(@Body() create:createFlightDTO){
 return this._flighservice.addflight(create)
 }
 

@@ -16,8 +16,7 @@ constructor(private _AirlineService:AirlineService){
 @UseGuards(AuthGuard('jwt'), RolesGuard)
 @Roles('admin')
 @Post('add/v1/airline')
-add(@Body() addairline:addAirlineDTO,@Req() req:Request){
-  console.log(req['username']);
+add(@Body() addairline:addAirlineDTO){
   const addairlines= this._AirlineService.addairline(addairline);
   return addairlines;
  }
